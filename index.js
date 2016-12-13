@@ -1,7 +1,10 @@
 const choo = require('choo')
 const mainView = require('./views/main')
+const devtools = require('choo-devtools')
 
-const app = choo()
+const app = devtools(choo())
+
+// const app = choo()
 app.model(require('./model'))
 
 app.router((route) => [
