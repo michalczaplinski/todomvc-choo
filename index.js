@@ -1,8 +1,11 @@
 const choo = require('choo')
 const mainView = require('./views/main')
 const devtools = require('choo-devtools')
+const choolog = require('choo-log')
 
 const app = devtools(choo())
+
+app.use(choolog())
 
 // const app = choo()
 app.model(require('./model'))
